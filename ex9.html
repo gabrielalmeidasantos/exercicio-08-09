@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fibonacci = parseInt(
+        prompt(
+          "Até qual numero deseja ver o fibonacci? \n \nOBS: nós finalizaremos o codigo quando o fibonacci atingir um valor proximo a 500 "
+        )
+      );
+      if (fibonacci) {
+        let dados = [1, 1];
+        for (let i = 1; i <= fibonacci; i++) {
+          let nValor = dados[i] + dados[i - 1];
+          if (nValor > 500) {
+            break;
+          }
+          dados.push(nValor);
+        }
+        document.write(dados);
+      }
+    </script>
+  </body>
+</html>
